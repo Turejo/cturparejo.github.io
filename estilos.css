@@ -1,13 +1,18 @@
+/* ===== ESTILOS GLOBALES ===== */
+/* Reinicia márgenes, padding y ajusta el modelo de caja para todos los elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Layout base para asegurar footer al fondo */
+/* Asegura que el cuerpo ocupe toda la pantalla y permite que el footer se mantenga al fondo */
 html, body { height: 100%; }
 body { display: flex; flex-direction: column; min-height: 100vh; }
 
+
+/* ===== HEADER Y NAVEGACIÓN ===== */
+/* Encabezado con menú alineado a la derecha */
 header {
     display: flex;
     justify-content: flex-end;
@@ -16,12 +21,14 @@ header {
     position: relative;
 }
 
+/* Menú hamburguesa para dispositivos móviles (oculto por defecto) */
 .menu-mobile {
     display: none;
     position: absolute;
     right: 20px;
 }
 
+/* Botón del menú móvil - icono de tres líneas */
 .menu-mobile summary {
     cursor: pointer;
     font-size: 28px;
@@ -32,19 +39,23 @@ header {
     list-style: none;
 }
 
+/* Oculta el marcador predeterminado de details en navegadores webkit */
 .menu-mobile summary::-webkit-details-marker {
     display: none;
 }
 
+/* Oculta el marcador predeterminado de details en otros navegadores */
 .menu-mobile summary::marker {
     display: none;
 }
 
+/* Efecto hover sobre el botón del menú móvil */
 .menu-mobile summary:hover {
     color: #0066cc;
     transition: color 0.3s ease;
 }
 
+/* Menú desplegable móvil - aparece debajo del botón */
 .menu-mobile nav {
     position: absolute;
     top: 70px;
@@ -55,10 +66,12 @@ header {
     width: 100%;
 }
 
+/* Menú horizontal para pantallas grandes (visible por defecto) */
 .menu-desktop {
     display: block;
 }
 
+/* Botón toggle del menú - no se utiliza actualmente */
 .menu-toggle {
     display: none;
     background: none;
@@ -68,6 +81,7 @@ header {
     color: #333;
 }
 
+/* Lista de navegación - menú horizontal */
 nav ul {
     display: flex;
     justify-content: flex-end;
@@ -76,21 +90,28 @@ nav ul {
     padding: 20px;
 }
 
+/* Enlaces de navegación */
 nav a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
 }
 
+/* Efecto hover en los enlaces del menú */
 nav a:hover {
     color: #0066cc;
 }
 
+
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+/* Contenedor principal del sitio */
 main {
     padding: 40px 20px;
     flex: 1;
 }
 
+/* Sección hero - portada con imagen de fondo */
 main > section:first-of-type {
     text-align: center;
     padding: 80px 20px;
@@ -105,18 +126,22 @@ main > section:first-of-type {
     align-items: center;
 }
 
+/* Título principal de la portada */
 main > section:first-of-type h1 {
     margin-bottom: 20px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Párrafo en la portada */
 main > section:first-of-type p {
     font-size: 18px;
     color: #fff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+/* ===== GRID DE CONTENIDO ===== */
+/* Contenedor grid responsivo para mostrar elementos en columnas */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -125,6 +150,7 @@ main > section:first-of-type p {
     margin: 0 auto;
 }
 
+/* Elemento individual del grid */
 .grid-item {
     background-color: #f5f5f5;
     padding: 20px;
@@ -133,37 +159,51 @@ main > section:first-of-type p {
     transition: transform 0.3s ease;
 }
 
+/* Efecto hover en los elementos del grid - sube el elemento */
 .grid-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Product card tweaks */
+/* ===== TARJETAS DE PRODUCTO ===== */
+/* Contenedor de tarjeta de producto */
 .product-card { display:flex; flex-direction:column; gap:10px; }
+/* Imagen del producto */
 .product-card img { width:100%; height:180px; object-fit:cover; border-radius:6px; }
+/* Título del producto */
 .product-card h3 { font-size:18px; color:#0f172a; margin:0 }
+/* Descripción del producto */
 .product-desc { color:#6b7280; font-size:14px; margin:6px 0 0 }
+/* Precio del producto */
 .price { color:#2563eb; font-weight:800; font-size:18px; margin-top:8px }
+/* Botón dentro de la tarjeta de producto */
 .product-card .btn { margin-top:auto; align-self:flex-start }
 
-/* Estilos para la página de contacto */
-.contacto-intro {
 
+
+/* ===== PÁGINA DE CONTACTO ===== */
+/* Sección introductoria de la página de contacto */
+.contacto-intro {
     margin: 0 auto 30px auto;
     text-align: center;
     padding: 40px 20px;
 }
+
+/* Título de la página de contacto */
 .contacto-intro h1 {
     font-size: 36px;
     color: #222;
     margin-bottom: 12px;
 }
+
+/* Descripción de la página de contacto */
 .contacto-intro p {
     color: #555;
     font-size: 17px;
     line-height: 1.6;
 }
 
+/* Contenedor principal de contacto - grid con formulario y datos */
 .contacto-contenido {
     max-width: 1100px;
     margin: 0 auto;
@@ -173,6 +213,7 @@ main > section:first-of-type p {
     align-items: start;
 }
 
+/* Estilos del formulario de contacto */
 .contacto-form {
     background: #ffffff;
     padding: 28px;
@@ -180,13 +221,17 @@ main > section:first-of-type p {
     box-shadow: 0 6px 24px rgba(16,24,40,0.08);
 }
 
+/* Título del formulario de contacto */
 .contacto-form h2 {
     margin-bottom: 14px;
     color: #111827;
 }
 
+/* Grupo de formulario - cada campo con su etiqueta */
 .form-group { margin-bottom: 14px; }
+/* Etiqueta del formulario */
 .form-group label { display:block; margin-bottom:6px; color:#374151; font-weight:600; }
+/* Campos de entrada de texto y textarea */
 .form-group input,
 .form-group textarea {
     width:100%;
@@ -196,9 +241,13 @@ main > section:first-of-type p {
     font-size:15px;
     background:#fbfbfb;
 }
+
+/* Efecto focus en campos del formulario */
 .form-group input:focus,
 .form-group textarea:focus { outline:none; border-color:#2563eb; box-shadow:0 4px 16px rgba(37,99,235,0.12); }
 
+/* ===== BOTONES ===== */
+/* Estilo general de botones */
 .btn {
     display:inline-block;
     background:#2563eb;
@@ -210,26 +259,38 @@ main > section:first-of-type p {
     cursor:pointer;
     transition:background 0.18s ease, transform 0.12s ease;
 }
+
+/* Efecto hover en botones */
 .btn:hover { background:#1e4fd1; transform:translateY(-2px); }
 
+/* ===== INFORMACIÓN DE CONTACTO ===== */
+/* Panel lateral con información de contacto */
 .contacto-datos {
     background: linear-gradient(180deg,#fbfdff,#f7fbff);
     padding:22px;
     border-radius:12px;
     border:1px solid #eef6ff;
 }
+
+/* Título en el panel de datos de contacto */
 .contacto-datos h2{ margin-bottom:10px; color:#0f172a }
+/* Párrafos en el panel de datos de contacto */
 .contacto-datos p{ color:#374151; margin-bottom:8px }
 
-/* Ajustes responsivos para contacto */
+/* Ajustes responsivos para la página de contacto en tablets */
 @media (max-width: 900px) {
     .contacto-contenido { grid-template-columns: 1fr; }
     .contacto-intro { padding: 28px 12px; }
     .contacto-form { padding: 20px; }
 }
 
-/* Estilos para login coherentes con el resto */
+
+
+/* ===== PÁGINA DE LOGIN ===== */
+/* Contenedor de la sección de login */
 .login-section { max-width: 720px; margin: 30px auto; padding: 0 16px; }
+
+/* Caja principal del formulario de login */
 .login-container {
     max-width: 420px;
     margin: 0 auto;
@@ -238,28 +299,40 @@ main > section:first-of-type p {
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(2,6,23,0.08);
 }
+
+/* Título del login */
 .login-container h1 { text-align:center; color:#0f172a; margin-bottom:18px; font-size:24px }
+
+/* Estilos para los campos del formulario de login */
 .form-group { margin-bottom:16px }
 .form-group label { display:block; margin-bottom:8px; color:#374151; font-weight:600 }
 .form-group input { width:100%; padding:12px 14px; border-radius:8px; border:1px solid #e6e6e6; background:#fbfbfb }
 .form-group input:focus { outline:none; border-color:#2563eb; box-shadow:0 6px 20px rgba(37,99,235,0.08) }
+
+/* Botón de envío del formulario de login */
 .login-btn { width:100%; padding:12px 14px; border-radius:10px; background:#2563eb; color:#fff; border:none; font-weight:700; cursor:pointer }
 .login-btn:hover { background:#1e4fd1 }
+
+/* Enlaces de ayuda en la página de login */
 .login-links { text-align:center; margin-top:14px; font-size:14px; color:#475569 }
 .login-links a { color:#2563eb; text-decoration:none }
 .login-links a:hover { text-decoration:underline }
 
+/* Ajustes responsivos para pantallas muy pequeñas */
 @media (max-width: 560px) {
     .login-container { padding:22px }
 }
 
-/* Footer global */
+/* ===== FOOTER ===== */
+/* Pie de página del sitio */
 footer {
     background: linear-gradient(180deg,#0b1220,#081026);
     color: #dbeafe;
     padding: 28px 16px;
     margin-top: 40px;
 }
+
+/* Contenedor interno del footer */
 .footer-inner {
     max-width: 1200px;
     margin: 0 auto;
@@ -269,12 +342,20 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+/* Marca del sitio en el footer */
 .footer-brand { font-weight:700; font-size:18px; color:#fff }
+
+/* Columnas del footer */
 .footer-col { min-width:180px }
+/* Texto y enlaces dentro de las columnas del footer */
 .footer-col p, .footer-col a { color:#c7d2fe; font-size:14px; text-decoration:none }
 .footer-col a:hover { text-decoration:underline }
+
+/* Texto del copyright en el footer */
 .footer-bottom { text-align:center; color:#9aa7d8; margin-top:18px; font-size:13px }
 
+/* Ajustes responsivos para footer en tablets */
 @media (max-width:700px) {
     .footer-inner { gap:12px }
     .footer-col { min-width:140px }
@@ -282,16 +363,21 @@ footer {
 
 
 
-/* Móviles */
+/* ===== MEDIA QUERIES - DISEÑO RESPONSIVO ===== */
+
+/* MÓVILES - Pantallas de hasta 576px */
 @media (max-width: 576px) {
+    /* Muestra el menú hamburguesa en móviles */
     .menu-mobile {
         display: block;
     }
 
+    /* Oculta el menú desktop en móviles */
     .menu-desktop {
         display: none;
     }
 
+    /* Menú móvil en disposición vertical */
     .menu-mobile nav ul {
         flex-direction: column;
         gap: 15px;
@@ -299,92 +385,111 @@ footer {
         justify-content: flex-start;
     }
 
+    /* Separadores entre items del menú móvil */
     .menu-mobile nav li {
         border-bottom: 1px solid #eee;
         padding: 15px 0;
     }
 
+    /* Enlace más grande en móviles */
     .menu-mobile nav a {
         font-size: 18px;
     }
 
+    /* Última opción sin separador */
     .menu-mobile nav li:last-child {
         border-bottom: none;
     }
 
+    /* Grid con una sola columna en móviles */
     .grid-container {
         grid-template-columns: 1fr;
         gap: 15px;
     }
 
+    /* Menos padding en pantallas móviles */
     main {
         padding: 20px 10px;
     }
 
+    /* Títulos más pequeños en móviles */
     h1 {
         font-size: 24px;
     }
 }
 
-/* Tablets */
+/* TABLETS - Pantallas entre 577px y 768px */
 @media (min-width: 577px) and (max-width: 768px) {
+    /* Espaciado reducido en navegación */
     nav ul {
         gap: 15px;
         padding: 15px;
     }
 
+    /* Grid de dos columnas en tablets */
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
 
+    /* Padding moderado en el contenido principal */
     main {
         padding: 30px 15px;
     }
 
+    /* Títulos medianos en tablets */
     h1 {
         font-size: 28px;
     }
 }
 
-/* Portátiles */
+/* PORTÁTILES - Pantallas entre 769px y 1200px */
 @media (min-width: 769px) and (max-width: 1200px) {
+    /* Espaciado normal en navegación */
     nav ul {
         gap: 20px;
         padding: 20px;
     }
 
+    /* Grid de tres columnas en portátiles */
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
 
+    /* Padding normal en contenido principal */
     main {
         padding: 35px 20px;
     }
 
+    /* Títulos grandes en portátiles */
     h1 {
         font-size: 32px;
     }
 }
 
-/* Escritorio */
+/* ESCRITORIO - Pantallas mayores a 1201px */
 @media (min-width: 1201px) {
+    /* Espaciado generoso en navegación */
     nav ul {
         gap: 30px;
         padding: 25px;
     }
 
+    /* Grid de cuatro columnas en escritorio */
     .grid-container {
         grid-template-columns: repeat(4, 1fr);
         gap: 25px;
     }
 
+    /* Padding óptimo en contenido principal */
     main {
         padding: 40px 20px;
     }
 
+    /* Títulos muy grandes en escritorio */
     h1 {
         font-size: 36px;
     }
 }
+
