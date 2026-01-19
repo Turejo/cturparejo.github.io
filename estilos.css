@@ -55,6 +55,11 @@ header {
     transition: color 0.3s ease;
 }
 
+/* Estado abierto del menú mobile */
+.menu-mobile[open] summary {
+    color: #0066cc;
+}
+
 /* Menú desplegable móvil - aparece debajo del botón */
 .menu-mobile nav {
     position: absolute;
@@ -64,6 +69,42 @@ header {
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
+    z-index: 1000;
+}
+
+/* Estilos de la lista del menú móvil */
+.menu-mobile nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 0;
+}
+
+/* Elementos de la lista del menú móvil */
+.menu-mobile nav li {
+    padding: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Último elemento sin borde */
+.menu-mobile nav li:last-child {
+    border-bottom: none;
+}
+
+/* Enlaces del menú móvil */
+.menu-mobile nav a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto hover en enlaces del menú móvil */
+.menu-mobile nav a:hover {
+    background-color: #f0f0f0;
+    color: #0066cc;
 }
 
 /* Menú horizontal para pantallas grandes (visible por defecto) */
@@ -380,25 +421,37 @@ footer {
     /* Menú móvil en disposición vertical */
     .menu-mobile nav ul {
         flex-direction: column;
-        gap: 15px;
-        padding: 25px;
+        gap: 0;
+        padding: 0;
         justify-content: flex-start;
     }
 
     /* Separadores entre items del menú móvil */
     .menu-mobile nav li {
-        border-bottom: 1px solid #eee;
-        padding: 15px 0;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 0;
+        margin: 0;
     }
 
-    /* Enlace más grande en móviles */
-    .menu-mobile nav a {
-        font-size: 18px;
-    }
-
-    /* Última opción sin separador */
+    /* Último elemento sin borde */
     .menu-mobile nav li:last-child {
         border-bottom: none;
+    }
+
+    /* Enlaces del menú móvil con padding completo */
+    .menu-mobile nav a {
+        display: block;
+        padding: 15px 20px;
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    /* Efecto hover en menú móvil */
+    .menu-mobile nav a:hover {
+        background-color: #f0f0f0;
+        color: #0066cc;
     }
 
     /* Grid con una sola columna en móviles */
