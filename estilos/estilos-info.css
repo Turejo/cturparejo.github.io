@@ -10,13 +10,13 @@ main > section:first-of-type {
 /* Título de las páginas de información */
 main > section:first-of-type h1 {
     font-size: 32px;
-    color: #222;
+    color: white;
     margin-bottom: 12px;
 }
 
 /* Descripción de las páginas de información */
 main > section:first-of-type p {
-    color: #555;
+    color: white;
     font-size: 16px;
     line-height: 1.6;
 }
