@@ -1,0 +1,126 @@
+/* ===== PÁGINA DE REGISTRO ===== */
+
+/* Contenedor de la sección de formulario */
+.form-section {
+    max-width: 720px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+/* Caja principal del formulario de registro */
+.registro-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 34px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(2,6,23,0.08);
+}
+
+/* Título de la sección de registro */
+.form-section h1 {
+    text-align: center;
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+/* Párrafo descriptivo de la sección */
+.form-section > p {
+    text-align: center;
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Estilos para los campos del formulario de registro */
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; margin-bottom: 8px; color: #374151; font-weight: 600; }
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #e6e6e6;
+    background: #fbfbfb;
+    font-size: 15px;
+}
+
+/* Efecto focus en campos */
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 6px 20px rgba(37,99,235,0.08);
+}
+
+/* Checkbox especial */
+.form-group.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-group.checkbox input {
+    width: auto;
+    margin: 0;
+}
+
+.form-group.checkbox label {
+    margin: 0;
+    font-weight: 500;
+}
+
+.form-group.checkbox a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.form-group.checkbox a:hover {
+    text-decoration: underline;
+}
+
+/* Botón de envío del formulario de registro */
+.btn-submit { 
+    width: 100%; 
+    padding: 12px 14px; 
+    border-radius: 10px; 
+    background: #2563eb; 
+    color: #fff; 
+    border: none; 
+    font-weight: 700; 
+    cursor: pointer;
+    transition: background 0.18s ease, transform 0.12s ease;
+}
+
+.btn-submit:hover { 
+    background: #1e4fd1;
+    transform: translateY(-2px);
+}
+
+/* Enlace a login */
+.login-link {
+    text-align: center;
+    margin-top: 16px;
+    color: #666;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 560px) {
+    .form-section > p {
+        font-size: 14px;
+    }
+
+    .registro-form {
+        padding: 22px;
+    }
+}

@@ -1,0 +1,99 @@
+/* ===== PÁGINA INICIO ===== */
+
+/* ===== GRID DE CONTENIDO ===== */
+/* Contenedor grid responsivo para mostrar elementos en columnas */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Elemento individual del grid */
+.grid-item {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover en los elementos del grid - sube el elemento */
+.grid-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: #cbd5e1;
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+/* ===== TARJETAS DE PRODUCTO ===== */
+/* Contenedor de tarjeta de producto */
+.product-card { display:flex; flex-direction:column; gap:10px; }
+/* Imagen del producto */
+.product-card img { width:100%; height:180px; object-fit:cover; border-radius:6px; }
+/* Título del producto */
+.product-card h3 { font-size:18px; color:#0f172a; margin:0 }
+/* Descripción del producto */
+.product-desc { color:#6b7280; font-size:14px; margin:6px 0 0 }
+/* Precio del producto */
+.price { color:#2563eb; font-weight:800; font-size:18px; margin-top:8px }
+/* Botón dentro de la tarjeta de producto */
+.product-card .btn { margin-top:auto; align-self:flex-start }
+
+/* ===== BOTONES ===== */
+/* Estilo general de botones */
+.btn {
+    display:inline-block;
+    background:#2563eb;
+    color:#fff;
+    padding:12px 18px;
+    border-radius:10px;
+    border:none;
+    font-weight:700;
+    cursor:pointer;
+    transition:background 0.18s ease, transform 0.12s ease;
+}
+
+/* Efecto hover en botones */
+.btn:hover { background:#1e4fd1; transform:translateY(-2px); }
+
+
+/* ===== MEDIA QUERIES - RESPONSIVE ===== */
+
+/* MÓVILES - Pantallas de hasta 576px */
+@media (max-width: 576px) {
+    /* Grid con una sola columna en móviles */
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+/* TABLETS - Pantallas entre 577px y 768px */
+@media (min-width: 577px) and (max-width: 768px) {
+    /* Grid de dos columnas en tablets */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+/* PORTÁTILES - Pantallas entre 769px y 1200px */
+@media (min-width: 769px) and (max-width: 1200px) {
+    /* Grid de tres columnas en portátiles */
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+/* ESCRITORIO - Pantallas mayores a 1201px */
+@media (min-width: 1201px) {
+    /* Grid de cuatro columnas en escritorio */
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+}

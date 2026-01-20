@@ -112,15 +112,7 @@ header {
     display: block;
 }
 
-/* Botón toggle del menú - no se utiliza actualmente */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: #333;
-}
+
 
 /* Lista de navegación - menú horizontal */
 nav ul {
@@ -153,10 +145,10 @@ main {
 }
 
 /* Sección hero - portada con imagen de fondo */
-main > section:first-of-type {
+.hero-section {
     text-align: center;
     padding: 80px 20px;
-    background: url('./imagenes/imagen_inicio.png') center/cover no-repeat;
+    background: url('/imagenes/imagen_inicio.png') center/cover no-repeat;
     background-color: #f5f5f5;
     border-radius: 12px;
     margin-bottom: 40px;
@@ -168,201 +160,19 @@ main > section:first-of-type {
 }
 
 /* Título principal de la portada */
-main > section:first-of-type h1 {
+.hero-section h1 {
     margin-bottom: 20px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Párrafo en la portada */
-main > section:first-of-type p {
+.hero-section p {
     font-size: 18px;
     color: #fff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* ===== GRID DE CONTENIDO ===== */
-/* Contenedor grid responsivo para mostrar elementos en columnas */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Elemento individual del grid */
-.grid-item {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-/* Efecto hover en los elementos del grid - sube el elemento */
-.grid-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* ===== TARJETAS DE PRODUCTO ===== */
-/* Contenedor de tarjeta de producto */
-.product-card { display:flex; flex-direction:column; gap:10px; }
-/* Imagen del producto */
-.product-card img { width:100%; height:180px; object-fit:cover; border-radius:6px; }
-/* Título del producto */
-.product-card h3 { font-size:18px; color:#0f172a; margin:0 }
-/* Descripción del producto */
-.product-desc { color:#6b7280; font-size:14px; margin:6px 0 0 }
-/* Precio del producto */
-.price { color:#2563eb; font-weight:800; font-size:18px; margin-top:8px }
-/* Botón dentro de la tarjeta de producto */
-.product-card .btn { margin-top:auto; align-self:flex-start }
-
-
-
-/* ===== PÁGINA DE CONTACTO ===== */
-/* Sección introductoria de la página de contacto */
-.contacto-intro {
-    margin: 0 auto 30px auto;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-/* Título de la página de contacto */
-.contacto-intro h1 {
-    font-size: 36px;
-    color: #222;
-    margin-bottom: 12px;
-}
-
-/* Descripción de la página de contacto */
-.contacto-intro p {
-    color: #555;
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-/* Contenedor principal de contacto - grid con formulario y datos */
-.contacto-contenido {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 420px;
-    gap: 32px;
-    align-items: start;
-}
-
-/* Estilos del formulario de contacto */
-.contacto-form {
-    background: #ffffff;
-    padding: 28px;
-    border-radius: 12px;
-    box-shadow: 0 6px 24px rgba(16,24,40,0.08);
-}
-
-/* Título del formulario de contacto */
-.contacto-form h2 {
-    margin-bottom: 14px;
-    color: #111827;
-}
-
-/* Grupo de formulario - cada campo con su etiqueta */
-.form-group { margin-bottom: 14px; }
-/* Etiqueta del formulario */
-.form-group label { display:block; margin-bottom:6px; color:#374151; font-weight:600; }
-/* Campos de entrada de texto y textarea */
-.form-group input,
-.form-group textarea {
-    width:100%;
-    padding:12px 14px;
-    border:1px solid #e6e6e6;
-    border-radius:8px;
-    font-size:15px;
-    background:#fbfbfb;
-}
-
-/* Efecto focus en campos del formulario */
-.form-group input:focus,
-.form-group textarea:focus { outline:none; border-color:#2563eb; box-shadow:0 4px 16px rgba(37,99,235,0.12); }
-
-/* ===== BOTONES ===== */
-/* Estilo general de botones */
-.btn {
-    display:inline-block;
-    background:#2563eb;
-    color:#fff;
-    padding:12px 18px;
-    border-radius:10px;
-    border:none;
-    font-weight:700;
-    cursor:pointer;
-    transition:background 0.18s ease, transform 0.12s ease;
-}
-
-/* Efecto hover en botones */
-.btn:hover { background:#1e4fd1; transform:translateY(-2px); }
-
-/* ===== INFORMACIÓN DE CONTACTO ===== */
-/* Panel lateral con información de contacto */
-.contacto-datos {
-    background: linear-gradient(180deg,#fbfdff,#f7fbff);
-    padding:22px;
-    border-radius:12px;
-    border:1px solid #eef6ff;
-}
-
-/* Título en el panel de datos de contacto */
-.contacto-datos h2{ margin-bottom:10px; color:#0f172a }
-/* Párrafos en el panel de datos de contacto */
-.contacto-datos p{ color:#374151; margin-bottom:8px }
-
-/* Ajustes responsivos para la página de contacto en tablets */
-@media (max-width: 900px) {
-    .contacto-contenido { grid-template-columns: 1fr; }
-    .contacto-intro { padding: 28px 12px; }
-    .contacto-form { padding: 20px; }
-}
-
-
-
-/* ===== PÁGINA DE LOGIN ===== */
-/* Contenedor de la sección de login */
-.login-section { max-width: 720px; margin: 30px auto; padding: 0 16px; }
-
-/* Caja principal del formulario de login */
-.login-container {
-    max-width: 420px;
-    margin: 0 auto;
-    padding: 34px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(2,6,23,0.08);
-}
-
-/* Título del login */
-.login-container h1 { text-align:center; color:#0f172a; margin-bottom:18px; font-size:24px }
-
-/* Estilos para los campos del formulario de login */
-.form-group { margin-bottom:16px }
-.form-group label { display:block; margin-bottom:8px; color:#374151; font-weight:600 }
-.form-group input { width:100%; padding:12px 14px; border-radius:8px; border:1px solid #e6e6e6; background:#fbfbfb }
-.form-group input:focus { outline:none; border-color:#2563eb; box-shadow:0 6px 20px rgba(37,99,235,0.08) }
-
-/* Botón de envío del formulario de login */
-.login-btn { width:100%; padding:12px 14px; border-radius:10px; background:#2563eb; color:#fff; border:none; font-weight:700; cursor:pointer }
-.login-btn:hover { background:#1e4fd1 }
-
-/* Enlaces de ayuda en la página de login */
-.login-links { text-align:center; margin-top:14px; font-size:14px; color:#475569 }
-.login-links a { color:#2563eb; text-decoration:none }
-.login-links a:hover { text-decoration:underline }
-
-/* Ajustes responsivos para pantallas muy pequeñas */
-@media (max-width: 560px) {
-    .login-container { padding:22px }
-}
 
 /* ===== FOOTER ===== */
 /* Pie de página del sitio */
@@ -421,16 +231,12 @@ footer {
     /* Menú móvil en disposición vertical */
     .menu-mobile nav ul {
         flex-direction: column;
-        gap: 0;
         padding: 0;
-        justify-content: flex-start;
     }
 
     /* Separadores entre items del menú móvil */
     .menu-mobile nav li {
         border-bottom: 1px solid #e5e5e5;
-        padding: 0;
-        margin: 0;
     }
 
     /* Último elemento sin borde */
@@ -454,12 +260,6 @@ footer {
         color: #0066cc;
     }
 
-    /* Grid con una sola columna en móviles */
-    .grid-container {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
     /* Menos padding en pantallas móviles */
     main {
         padding: 20px 10px;
@@ -477,12 +277,6 @@ footer {
     nav ul {
         gap: 15px;
         padding: 15px;
-    }
-
-    /* Grid de dos columnas en tablets */
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
     }
 
     /* Padding moderado en el contenido principal */
@@ -504,12 +298,6 @@ footer {
         padding: 20px;
     }
 
-    /* Grid de tres columnas en portátiles */
-    .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
     /* Padding normal en contenido principal */
     main {
         padding: 35px 20px;
@@ -529,12 +317,6 @@ footer {
         padding: 25px;
     }
 
-    /* Grid de cuatro columnas en escritorio */
-    .grid-container {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 25px;
-    }
-
     /* Padding óptimo en contenido principal */
     main {
         padding: 40px 20px;
@@ -545,4 +327,3 @@ footer {
         font-size: 36px;
     }
 }
-

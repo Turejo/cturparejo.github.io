@@ -1,0 +1,123 @@
+/* ===== PÁGINAS DE INFORMACIÓN (Avisolegal, Cookies, Nosotros) ===== */
+
+/* Sección introductoria de las páginas de información */
+main > section:first-of-type {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+/* Título de las páginas de información */
+main > section:first-of-type h1 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+/* Descripción de las páginas de información */
+main > section:first-of-type p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ===== GRID DE CONTENIDO ===== */
+/* Contenedor grid responsivo para mostrar elementos en columnas */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Elemento individual del grid */
+.grid-item {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover en los elementos del grid - sube el elemento */
+.grid-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: #cbd5e1;
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+/* Títulos dentro de los grid items */
+.grid-item h3 {
+    color: #0f172a;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Párrafos dentro de los grid items */
+.grid-item p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ===== MEDIA QUERIES - RESPONSIVE ===== */
+
+/* MÓVILES - Pantallas de hasta 576px */
+@media (max-width: 576px) {
+    main > section:first-of-type h1 {
+        font-size: 24px;
+    }
+
+    main > section:first-of-type p {
+        font-size: 14px;
+    }
+
+    /* Grid con una sola columna en móviles */
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+/* TABLETS - Pantallas entre 577px y 768px */
+@media (min-width: 577px) and (max-width: 768px) {
+    main > section:first-of-type h1 {
+        font-size: 28px;
+    }
+
+    /* Grid de dos columnas en tablets */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+/* PORTÁTILES - Pantallas entre 769px y 1200px */
+@media (min-width: 769px) and (max-width: 1200px) {
+    main > section:first-of-type h1 {
+        font-size: 32px;
+    }
+
+    /* Grid de tres columnas en portátiles */
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+/* ESCRITORIO - Pantallas mayores a 1201px */
+@media (min-width: 1201px) {
+    main > section:first-of-type h1 {
+        font-size: 36px;
+    }
+
+    /* Grid de cuatro columnas en escritorio */
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+}
