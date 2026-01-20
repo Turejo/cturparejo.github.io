@@ -26,15 +26,22 @@ header {
 
 /* Contenedor del logo en la esquina superior izquierda */
 .logo-container {
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 100;
+    z-index: 101;
 }
 
 .logo {
     height: 50px;
     width: auto;
+}
+
+/* Enlace del logo */
+.logo-container a {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Menú hamburguesa para dispositivos móviles (oculto por defecto) */
@@ -86,6 +93,7 @@ header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     z-index: 1000;
+    margin-top: 20px;
 }
 
 /* Estilos de la lista del menú móvil */
@@ -157,6 +165,7 @@ nav a:hover {
 /* Contenedor principal del sitio */
 main {
     padding: 40px 20px;
+    padding-top: 120px;
     flex: 1;
 }
 
@@ -279,6 +288,7 @@ footer {
     /* Menos padding en pantallas móviles */
     main {
         padding: 20px 10px;
+        padding-top: 120px;
     }
 
     /* Títulos más pequeños en móviles */
@@ -298,6 +308,7 @@ footer {
     /* Padding moderado en el contenido principal */
     main {
         padding: 30px 15px;
+        padding-top: 120px;
     }
 
     /* Títulos medianos en tablets */
