@@ -245,7 +245,7 @@ footer {
 @media (max-width: 576px) {
     /* Muestra el menú hamburguesa en móviles */
     .menu-mobile {
-        display: block;
+        display: flex;
     }
 
     /* Oculta el menú desktop en móviles */
