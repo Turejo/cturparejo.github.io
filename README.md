@@ -82,8 +82,8 @@ Jordicristian.github.io/
 
 ## 👥 Autores
 
-- **Cristian**: Creación de estilos CSS y diseño visual
-- **Jordi**: Creación de estructura HTML y funcionalidad
+- **Cristian**: Creación de estilos CSS, diseño visual y parte de la estructura HTML
+- **Jordi**: Creación de estructura HTML, funcionalidad y proporcion de Material Digital para el proyecto
 - **2025/2026**
 
 ## 📜 Licencia
@@ -95,6 +95,7 @@ Todos los derechos reservados © 2026 Sa colomina
 - **Email**: contacto@ejemplo.com
 - **Teléfono**: +34 600 000 000
 - **Horario**: 9:00 - 18:00
+
 
 
 
