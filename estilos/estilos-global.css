@@ -170,7 +170,7 @@ header {
     color: #2563eb;
     padding-left: 25px;
     border-left-color: #2563eb;
-}
+
     color: #333;
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -471,30 +471,54 @@ footer {
 
     .footer-inner {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 20px;
+    }
+
+    .footer-brand-section {
+        align-items: center;
+        text-align: center;
     }
 
     .footer-brand {
         font-size: 18px;
     }
 
+    .footer-col {
+        align-items: center;
+        text-align: center;
+    }
+
     .footer-col h4 {
         font-size: 13px;
+    }
+
+    .footer-col ul {
+        align-items: center;
     }
 
     .footer-col a {
         font-size: 12px;
     }
 
+    .footer-col a:hover {
+        padding-left: 0;
+    }
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
         font-size: 12px;
+        gap: 15px;
     }
 
     .footer-meta {
         flex-direction: column;
         gap: 10px;
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 }
 
