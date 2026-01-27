@@ -29,6 +29,7 @@ main > section:first-of-type p {
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 40px 20px;
 }
 
 /* Elemento individual del grid */
@@ -115,9 +116,10 @@ main > section:first-of-type p {
         font-size: 36px;
     }
 
-    /* Grid de cuatro columnas en escritorio */
+    /* Grid de tres columnas en escritorio */
     .grid-container {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 25px;
+        padding: 60px 40px;
     }
 }
