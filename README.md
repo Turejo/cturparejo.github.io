@@ -1,6 +1,7 @@
 ﻿# 🎮 Sa colomina - Tienda de Merchandising de Videojuegos
 
-Sitio web oficial de Sa colomina, una tienda online especializada en merchandising de videojuegos, con catálogo de productos variados incluyendo ropa, accesorios, peluches y juegos retro.
+- Sitio web oficial de Sa colomina, una tienda online especializada en merchandising de videojuegos, con catálogo de productos variados incluyendo ropa, accesorios, peluches y juegos retro.
+- Enlace: https://turejo.github.io/Jordicristian.github.io/index.html
 
 ## ✨ Características
 
@@ -94,6 +95,7 @@ Todos los derechos reservados © 2026 Sa colomina
 - **Email**: contacto@ejemplo.com
 - **Teléfono**: +34 600 000 000
 - **Horario**: 9:00 - 18:00
+
 
 
 
