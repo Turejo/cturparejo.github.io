@@ -119,5 +119,31 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Imágenes del carrusel hero
+        const heroImages = [
+            '../imagenes/imagenesherosection/imagen-1.png',
+            '../imagenes/imagenesherosection/imagen-4.png',
+            '../imagenes/imagenesherosection/imagen-5.png',
+            '../imagenes/imagenesherosection/imagen-6.png',
+            '../imagenes/imagenesherosection/imagen-10.png'
+        ];
+
+        let currentImageIndex = 0;
+
+        function changeHeroImage() {
+            const heroSection = document.querySelector('.hero-section');
+            heroSection.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
+            currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+        }
+
+        // Cambiar imagen al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            changeHeroImage();
+            // Cambiar imagen cada 5 segundos
+            setInterval(changeHeroImage, 5000);
+        });
+    </script>
 </body>
 </html>

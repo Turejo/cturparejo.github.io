@@ -241,16 +241,19 @@ main {
 /* Sección hero - portada con imagen de fondo */
 .hero-section {
     text-align: left;
-    padding: 80px 20px;
-    background: url('../imagenes/imagen_inicio.png') center/cover no-repeat;
+    padding: 120px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: #f5f5f5;
     border-radius: 12px;
     margin-bottom: 40px;
-    min-height: 400px;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    transition: background-image 0.8s ease-in-out;
 }
 
 /* Título principal de la portada */

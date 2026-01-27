@@ -35,6 +35,8 @@
     flex-direction: column; 
     gap: 12px;
     height: 100%;
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Imagen del producto */
@@ -61,6 +63,12 @@
     margin: 0;
     line-height: 1.5;
     flex-grow: 1;
+    text-decoration: none;
+}
+
+/* Eliminar decoración de texto en párrafo de descripción dentro de enlaces */
+a .product-desc {
+    text-decoration: none;
 }
 
 /* Precio del producto */
